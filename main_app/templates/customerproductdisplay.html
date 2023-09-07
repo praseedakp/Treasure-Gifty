@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script>
+function myFunction(){
+  // Declare variables
+  var input,filter,ul,li,a,i,txtValue;
+  input=document.getElementById('myInput');
+  filter=input.value.toUpperCase();
+  ul=document.getElementById("myUL");
+  li=ul.getElementsByTagName('div');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i=0;i<li.length;i++) {
+    a=li[i].getElementsByTagName("p")[0];
+    txtValue=a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter)>-1) {
+      li[i].style.display="";
+    }
+    else {
+      li[i].style.display="none";
+    }
+  }
+}
+
+</script>
+
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Customer collection Display</title>
+    <style>
+
+    *{
+  padding:0px;
+  margin:0px;
+  box:border-box;
+  }
+  body{
+  background-color:#eeeedd;
+  }
+    .navbar{
+    background-color: #1c2d88;
+    }
+     .nav-link{
+    font-size:20px;
+    font-family:cursive;
+
+    }
+    .carousel-item img{
+    height:550px;
+    }
+    .carousel-caption{
+    color:#003366;
+    font-size:60px;
+    font-weight:100px;
+
+    }
+    .dis{
+        margin-top:30px;
+        }
+        .card{
+        margin-bottom:15px;
+        border:2px solid white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        img{
+        height:200px;
+        width:200px;
+        }
+         img:hover{
+        transform:scale(1.01);
+        }
+        h3{
+        text-align:center;
+        padding:6px;
+
+        }
+        h5{
+        text-align:justify;
+        font-family:cursive;
+        color:#003366;
+        background-color: #08AEEA;
+        background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+        margin-bottom:30px;
+
+        }
+        .card-body{
+        text-align:center;
+<!--        padding:-58px;-->
+        font-family:cursive;
+        }
+        input{
+        width:500px;
+       margin-bottom:30px;
+       border:4px solid green;
+        }
+        p{
+        font-size:17px;
+        margin-top:-5px;
+        }
+        p .fa-solid{
+        color:red;
+        }
+        .btn{
+        width:260px;
+        }
+        .fa-solid{
+        color:#ffaa00;
+        }
+
+        .fa-file-video{
+        color:pink;
+        margin-left:10px;
+        }
+    </style>
+</head>
+
+<body>
+<!--navbar and ul-->
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <b><a class="navbar-brand" href="http://127.0.0.1:8000/main_app/customerprodisplay/" style="color:white;">Treasure Gifty(TG)</a></b>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/indexone/" style="color:white;">Home</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerreg/" style="color:white;">Register</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerlogin/" style="color:white;">Login</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/aboutuspage/" style="color:white;">About Us</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/contactpage/" style="color:white;">Contact Us</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/videocustomerdisp/"><i class="fa-regular fa-file-video"></i></a>
+            </li>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/gallerycustomerdisp/"><i class="fa-solid fa-gift"></i></a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/newsfeeddisplay/"> <i class="fa-solid fa-bell fa-beat" style="color:red;"></i></a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/cartdisplay/"><i class="fa-solid fa-cart-shopping fa-fade" style="color:white;margin-left:560px;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/wishdisplay/"><i class="fa-regular fa-heart fa-fade" style="color:red;"></i></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerprofile/"><i class="fa-regular fa-circle-user" style="color:white;"></i></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!--carousel:-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'prohomebgimage.jpeg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <b><h2>Get upto 70% off on gifts</h2></b>
+        <b><p>Don't let this offer slip away</p></b>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'procakebg.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <b><h2>Get upto 70% off on gifts</h2></b>
+        <b><p>Don't let this offer slip away</p></b>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'sweetsbackgprodis.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+        <b><h2>Get upto 70% off on gifts</h2></b>
+        <b><p>Don't let this offer slip away</p></b>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'mugbackgroundpro.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <b><h2>Get upto 70% off on gifts</h2></b>
+        <b><p>Don't let this offer slip away</p></b>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'softtoyprod.jpeg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+       <b><h2>Get upto 70% off on gifts</h2></b>
+        <b><p>Don't let this offer slip away</p></b>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<!--upload all product here page here-->
+
+<div class="dis">
+    <div class="container">
+        <h3><b>Send Cakes, Gifts & Flowers Online</b></h3>
+        <h5><b>Treasure Gifty(TG) is India’s top gifting brand that helps you celebrate special moments by delivering fabulous gifts to your loved ones.
+            You can find thoughtful gifts for all special days like Birthdays, Anniversaries, Valentine's day and festivals like Rakshabandhan (Rakhi), Diwali and Christmas etc. Our range of gifts includes flower bouquets and yummy cakes which can be delivered to all major cities. We can also deliver personalised gifts, potted plants, chocolates, gift hampers, digital gifts etc.</b></h5>
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by topics">
+
+
+        <div class="row" id="myUL">
+
+            {% for i,j,l,m,n,o in ppair %}
+
+                <div class="col-3">
+                    <div class="card" style="width:300px;">
+                    <img src="{% static m %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b><p style="color:green;">{{j}}</p></b>
+                    <b><p class="card-text">{{l}}</p></b>
+                        <p>{{n}}</p>
+                        <b><p style="color:red;"><i class="fa-solid fa-indian-rupee-sign"></i>{{o}}</p></b>
+
+                        <a href="http://127.0.0.1:8000/main_app/wishlist/{{i}}"><i class="fa-regular fa-heart fa-2x fa-fade" style="color:red;margin-right:170px;"></i></a>
+                        <a href="http://127.0.0.1:8000/main_app/singledisplaypage/{{i}}"><i class="fa-solid fa-diamond fa-fade fa-2x" style="color:green;"></i></a><br>
+
+                        <i class="fa-solid fa-star"></i>
+                       <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <a href="http://127.0.0.1:8000/main_app/addtocart/{{i}}" class="btn btn-warning"><b>Add To Cart</b></a>
+
+                    </div>
+                </div>
+                </div>
+
+            {% endfor %}
+                    <!--searchdiv-->
+                </div>
+
+            </div>
+        </div>
+
+</body>
+</html>

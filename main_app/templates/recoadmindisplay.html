@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Display recommented products for cstomers</title>
+    <style>
+          *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+     background-color: #FAACA8;
+background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
+
+     }
+
+     .re{
+        margin-top:100px;
+        border:2px solid black;
+        height:200px;
+        width:400px;
+        margin-left:490px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        h1{
+        text-align:center;
+        font-size:40px;
+        margin-top:50px;
+        color:red;
+        }
+        .firrow{
+        margin-top:40px;
+        height:600px;
+        width:100%;
+
+        }
+        h3{
+        text-align:center;
+        color:crimson;
+        font-size:30px;
+
+        }
+        img{
+        height:250px;
+        width:300px;
+        border-radius:40% 40%;
+        border:3px solid white;
+        }
+        .card-text{
+        text-align:center;
+        font-size:20px;
+        color:#ffff;
+        background-color: #FF9A8B;
+background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 27%, #3e23c8 49%, #bd1e1e 75%, #efcf33 100%);
+        }
+        .card{
+        height:410px;
+        width:300px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .btn{
+        margin-top:10px;
+        width:100px;
+        height:50px;
+        font-size:20px;
+        margin-left:10px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-light">Back</a>
+</div>
+
+<div class="re">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Item already in card</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="firrow">
+        <div class="container">
+            <h3>Handpicked for you</h3>
+
+            <div class="row">
+                 {% for h,i,j in pa %}
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                    <img src="{% static j %}" class="card-img-top">
+                        <div class="card-body">
+                            <b><p class="card-text">{{i}}</p></b>
+                            <a href=" http://127.0.0.1:8000/main_app/recoadminedits/{{h}}" class="btn btn-dark">Edit</a>
+                            <a href="http://127.0.0.1:8000/main_app/recoadmindeletes/{{h}}" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+            </div>
+             {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

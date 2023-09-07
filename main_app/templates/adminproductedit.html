@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Admin product edit</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+     body{
+  background-color:#eeeedd;
+  }
+
+     .pe{
+        height:500px;
+        width:650px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:5px;
+        opacity:0.9;
+        }
+         .pe .btn{
+        width:300px;
+        margin-left:98px;
+        }
+         form{
+        margin-left:60px;
+        margin-top:50px;
+        }
+
+        .form-control{
+    background-color:pink;
+    }
+    .input-group-text{
+    background-color:palegreen;
+    }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        }
+        h1{
+        text-align:center;
+        color:red;
+        }
+     .fa-solid{
+            color:red;
+        }
+        .btn{
+    margin-left:50px;
+    width:200px;
+    border:4px solid lightgrey;
+    font-size:20px;
+    }
+
+
+    </style>
+</head>
+<body>
+<h1>Edit Product</h1>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-light">Back</a>
+</div>
+<div class="pe">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-6">
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                          <input type="text" name="proname" class="form-control" placeholder="Product Name" value={{a.productname}} aria-label="proname" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                            <input type="text" name="proid" class="form-control" placeholder="productid" value={{a.proid}} aria-label="proid" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                            <input type="text" name="prodes" class="form-control" placeholder="productdescription" value={{a.prodes}} aria-label="prodes" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-image"></i></span>
+                             <img src="{% static img %}" height="100px" width="100px;">
+                            <input type="file" name="proimage" class="form-control" placeholder="Upload Image" value={{a.proimage}} aria-label="image" aria-describedby="basic-addon1">
+                        </div>
+
+                    <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                            <input type="number" name="proprice" class="form-control" placeholder="price of product" value={{a.proprice}} aria-label="price" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <button type="submit" class="btn btn-success">Update Product</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+</body>
+</html>

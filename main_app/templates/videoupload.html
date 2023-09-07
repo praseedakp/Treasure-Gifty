@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Video and Broshure upload</title>
+    <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+
+    }
+        .reg{
+        height:400px;
+        width:690px;
+        margin-left:440px;
+        background-color:white;
+        margin-top:30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+       h4{
+        margin-left:100px;
+        color:red;
+        font-size:30px;
+        margin-top:20px;
+        }
+        .btn{
+        width:300px;
+        margin-left:200px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        margin-left:100px;
+        }
+        form{
+        height:400px;
+        width:600px;
+        margin-left:10px;
+        }
+        .vu .btn{
+        width:260px;
+        margin-top:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="vu">
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-primary">Back</a>
+</div>
+<div class="reg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-6">
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <h4>Upload Videos and Brochures</h4>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-video"></i></span>
+                          <input type="text" name="vname" class="form-control" placeholder="Videoname" aria-label="vname" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-video"></i></span>
+                            <input type="file" name="video" class="form-control" placeholder="Video" aria-label="video" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file-pdf"></i></span>
+                          <input type="text" name="pdfname" class="form-control" placeholder="pdfname" aria-label="pdfname" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file-pdf"></i></span>
+                            <input type="file" name="pdf" class="form-control" placeholder="pdf" aria-label="pdf" aria-describedby="basic-addon1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

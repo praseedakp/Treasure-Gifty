@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Edit videos and Broshures</title>
+    <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+        .vid{
+        height:380px;
+        width:650px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:5px;
+        opacity:0.9;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+       h4{
+        text-align:center;
+        color:red;
+        }
+        .btn{
+        width:300px;
+        margin-left:130px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        margin-left:40px;
+
+        }
+        a{
+        text-decoration:none;
+        font-size:17px;
+        color:crimson;
+        }
+        .vi{
+        height:100px;
+        width:200px;
+        }
+        form{
+        height:500px;
+        width:600px;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-success" style="margin-top:10px;">Back</a>
+</div>
+
+<div class="vid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-6">
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <h4>Edit Video and Pdf</h4>
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-video"></i></span>
+                          <input type="text" name="videoeditna" class="form-control" placeholder="Videoname" value="{{d.vname}}" aria-label="Videoname" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-video"></i></span>
+                          <video controls class="vi">
+                            <source src="{% static vid %}">
+                          </video>
+                            <input type="file" name="video" class="form-control" placeholder="video" aria-label="video" value="{{d.video}}" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file-pdf"></i></span>
+                            <input type="text" name="pdfeditna" class="form-control" placeholder="pdfname" aria-label="pdfname" value="{{d.pdfname}}" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file-pdf"></i></span>
+                            <input type="file" name="pdf" class="form-control" placeholder="pdf" aria-label="pdf" value="{{d.pdf}}" aria-describedby="basic-addon1">
+                            <a href="{% static pd %}"></a>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Update</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Single view cart</title>
+  <style>
+     *{
+  padding:0px;
+  margin:0px;
+  box:border-box;
+  }
+  body{
+ background-color: #FAACA8;
+background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
+
+  }
+  .si{
+        margin-top:5px;
+        }
+        .card{
+        margin-top:10px;
+        margin-bottom:15px;
+        border:4px solid white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-left:290px;
+        }
+        card:hover{
+        transform:scale(1.5);
+        }
+        .card img{
+        transition:scale(1.9);
+        border:2px solid #4da6ff;
+        height:250px;
+        width:290px;
+        margin-left:200px;
+       margin-top:20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        img:hover{
+        transform:scale(1.09);
+        }
+        h3{
+        text-align:center;
+        padding:6px;
+        }
+        h5{
+        text-align:justify;
+        font-family:cursive;
+        background-color: #885047;
+background-image: linear-gradient(90deg, #885047 0%, #FF6A88 55%, #8316d0 100%);
+        color:white;
+        }
+        .card-body{
+        text-align:center;
+        padding:-10px;
+        font-size:20px;
+        }
+        p{
+        font-family:cursive;
+        color:#cc6600;
+        }
+        h3{
+        color:green;
+        font-family:cursive;
+        }
+        .fa-solid{
+        color:red;
+        }
+
+    .bu .btn{
+    margin-left:50px;
+    width:200px;
+    border:4px solid dimgrey;
+    font-size:18px;
+    margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+<div class="bu">
+    <a href="http://127.0.0.1:8000/main_app/customerprodisplay/" class="btn btn-light"><b>Back</b></a>
+</div>
+
+<div class="si">
+
+    <div class="container">
+        <h3><b>View Your Product</b></h3>
+        <h5><b>Treasure Gifty(TG) is India’s top gifting brand that helps you celebrate special moments by delivering fabulous gifts to your loved ones.
+            You can find thoughtful gifts for all special days like Birthdays, Anniversaries, Valentine's day and festivals like Rakshabandhan (Rakhi), Diwali and Christmas etc. Our range of gifts includes flower bouquets and yummy cakes which can be delivered to all major cities. We can also deliver personalised gifts, potted plants, chocolates, gift hampers, digital gifts etc.</b></h5>
+        <div class="row">
+
+            <div class="col-3">
+                <div class="card" style="width:690px;height:500px;">
+                    <img src="{% static im %}" class="card-img-top">
+                    <div class="card-body">
+                    <b><h3 class="card-title">{{a.productname}}</h3></b>
+                    <b><p class="card-text">{{a.proid}}</p></b>
+                    <b><p>{{a.prodes}}</p></b>
+                        <b><p><i class="fa-solid fa-indian-rupee-sign"></i>{{a.proprice}}</p></b>
+                </div>
+            </div>
+        </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+</html>

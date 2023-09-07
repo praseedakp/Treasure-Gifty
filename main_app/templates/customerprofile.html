@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Customer Profilepage</title>
+    <style>
+        *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+
+    }
+    body{
+     background-image:url({% static 'backgprofilecu.jpg' %});
+        background-repeat:no-repeat;
+        background-size:100% 750px;
+    }
+    .pro{
+        height:590px;
+        width:990px;
+        margin-left:280px;
+        background-color: #FAACA8;
+        background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 33%, #ab2020 66%, #4e1ba9 100%);
+
+        }
+        h1{
+        text-align:center;
+        font-family:cursive;
+        color:dimgrey;
+         margin-top:-60px;
+               }
+        h2{
+        text-align:center;
+        font-family:cursive;
+        color:white;
+        }
+        p{
+        color:dimgrey;
+        font-family:cursive;
+        font-size:26px;
+        margin-left:40px;
+        }
+        img{
+        border-radius:10% 70%;
+        margin-top:15px;
+        }
+        img:hover{
+        transform:scale(1.02);
+        }
+        #second{
+        height:500px;
+        width:500px;
+        background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 50%, #d87ede 100%);
+        }
+        .btn{
+        width:400px;
+        margin-top:40px;
+        border:5px solid white;
+        }
+        .fa-regular{
+        margin-left:1200px;
+        padding:10px;
+        }
+    </style>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/main_app/logoutpage/"><i class="fa-regular fa-circle-user fa-3x"></i></a>
+<h1>Your Details Are Here</h1>
+<h2>Enjoy The Journey</h2>
+<div class="pro">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                    <p><img src="{% static img %}" height="200px" width="200px"></p>
+                    <b><p>First Name:{{a.fname}}</p></b>
+                    <b><p>Last Name:{{a.lname}}</p></b>
+                    <b><p>State/City:{{a.state}}</p></b>
+                    <b><p>Username:{{a.uname}}</p></b>
+                    <b><p>Email:{{a.email}}</p></b>
+                    <b><p>Phone No:{{a.phone}}</p></b>
+
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                    <a href="http://127.0.0.1:8000/main_app/customeredit/{{a.id}}" class="btn btn-outline-secondary"><b>Edit Profile</b></a>
+                     <a href="http://127.0.0.1:8000/main_app/customerprodisplay/" class="btn btn-dark"><b>Purchase Products</b></a><br>
+
+                    <a href="http://127.0.0.1:8000/main_app/wishdisplay/" class="btn btn-outline-secondary"><b>Wishlist Display</b></a>
+                <a href="http://127.0.0.1:8000/main_app/cartdisplay/" class="btn btn-dark"><b>Card Display</b></a>
+                <a href="http://127.0.0.1:8000/main_app/newsfeeddisplay/" class="btn btn-outline-secondary"><b>News Display</b></a>
+                <a href="http://127.0.0.1:8000/main_app/gallerycustomerdisp/" class="btn btn-dark"><b>Product Gallery</b></a><br>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

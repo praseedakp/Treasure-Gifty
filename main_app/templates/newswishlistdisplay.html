@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Newswishlist Display For Customers</title>
+    <style>
+         #first{
+        height:360px;
+        width:900px;
+       background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+        margin-left:190px;
+        border:4px solid  #4d4dff;
+        }
+        h1{
+        color:#00cc99;
+        text-align:center;
+        }
+        img{
+        height:100px;
+        width:100px;
+        margin-left:20px;
+        margin-top:6px;
+        border:3px solid black;
+        }
+        h2{
+        margin-left:40px;
+        margin-top:-9px;
+        color:#009973;
+        }
+        p{
+        font-size:22px;
+        margin-left:60px;
+        color:#6600cc;
+        margin-top:-8px;
+        }
+        .fa-solid{
+        color:red;
+        margin-left:150px;
+        }
+        .btn{
+        width:200px;
+        margin-top:20px;
+        margin-left:30px;
+        font-size:20px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/newsfeeddisplay/" class="btn btn-warning">Back</a>
+</div>
+
+  <h1>News Wishlist For You</h1>
+{% for f,i,j,k,l,m,n,o in pz %}
+  {% if f == id %}
+    <div id="first">
+        <p>{{j}}</p>
+        <p>{{k}}</p>
+
+        <img src="{% static l %}" height="200px;" width="200px">
+        <p>Rs: {{m}}</p>
+        <p>Discount price: {{n}}</p>
+        <p>{{o}}</p>
+        <p><a href="http://127.0.0.1:8000/main_app/wishremovenews/{{f}}"><i class="fa-solid fa-trash-can"></i></a></p>
+    </div>
+  {% endif %}
+{% endfor %}
+</body>
+</html>
+
+
+

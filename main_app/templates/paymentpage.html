@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Payment for product</title>
+    <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+
+        .reg{
+        height:700px;
+        width:550px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:5px;
+        opacity:0.9;
+        }
+
+       h4{
+        text-align:center;
+        color:red;
+        }
+        .btn{
+        width:300px;
+        margin-left:98px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        }
+        a{
+        text-decoration:none;
+        font-size:17px;
+        color:crimson;
+        }
+    </style>
+</head>
+<body>
+<div class="reg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-6">
+                <form method="post">{% csrf_token %}
+                    <h4>payment method</h4>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="fname" class="form-control" placeholder="First Name" aria-label="firstname" aria-describedby="basic-addon1">
+                        </div>
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file"></i></span>
+                            <input type="email" name="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input type="number" name="phone" class="form-control" placeholder="Phone" aria-label="phone" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div>
+                            <input type="radio" name="gender" value="male">male
+                            <input type="radio" name="gender" value="female">female
+                            <input type="radio" name="gender" value="others">others
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" name="location" class="form-control" placeholder="loaction" aria-label="loaction" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                            <input type="date" name="date" class="form-control" placeholder="date" aria-label="date" aria-describedby="basic-addon1">
+                        </div>
+
+                      <div class="input-group mb-3">
+                            <select class="form-select" name="select" aria-label="Default select example">
+                                <option selected>payment system</option>
+                                <option value="Creditcard">Creditcard</option>
+                                <option value="Debitcard">Debitcard</option>
+                                <option value="Paytym">Paytym</option>
+                                <option value="Googlepay">Googlepay</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                            <input type="text" name="address" class="form-control" placeholder="address" aria-label="address" aria-describedby="basic-addon1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pay</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+

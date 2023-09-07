@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Newsfeed upload</title>
+    <style>
+    *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+        body{
+       background-color: #FAACA8;
+background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
+
+
+        }
+        .reg{
+        height:450px;
+        width:550px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:5px;
+        opacity:0.9;
+        }
+
+       h4{
+        text-align:center;
+        color:red;
+        }
+        .btn{
+        width:300px;
+        margin-left:98px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        }
+        a{
+        text-decoration:none;
+        font-size:17px;
+        color:crimson;
+        }
+        .di .btn{
+        margin-top:20px;
+        width:200px;
+        font-size:20px;
+        }
+    </style>
+</head>
+<body>
+<div class="di">
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-primary">Back</a>
+</div>
+<div class="reg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-6">
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <h4>News Feed Upload</h4>
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-newspaper"></i></span>
+                          <input type="text" name="heading" class="form-control" placeholder="Heading" aria-label="Heading" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-newspaper"></i></span>
+                            <input type="text" name="content" class="form-control" placeholder="content" aria-label="content" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-images"></i></span>
+                            <input type="file" name="image" class="form-control" placeholder="Upload Image" aria-label="image" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                            <input type="number" name="rate" class="form-control" placeholder="Rate" aria-label="Rate" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                            <input type="number" name="discount" class="form-control" placeholder="Discount" aria-label="Discount" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" name="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload news</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+
+

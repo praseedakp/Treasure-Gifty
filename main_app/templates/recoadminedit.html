@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Recommented admin display</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background-color:#00b386;
+    }
+     .ed{
+        height:380px;
+        width:650px;
+        margin-left:480px;
+        background-color:white;
+        opacity:0.9;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+         .btn{
+        width:300px;
+        margin-left:150px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        margin-left:50px;
+        }
+        h4{
+       margin-left:100px;
+        color:red;
+        margin-top:30px;
+        }
+        form{
+        width:650px;
+        height:400px;
+        }
+
+         .bu .btn{
+    margin-left:50px;
+    width:200px;
+    border:4px solid dimgrey;
+    font-size:15px;
+    margin-bottom:10px;
+    margin-top:30px;
+
+    }
+    form{
+    height:400px;
+    width:600px;
+    margin-left:30px;
+
+
+    }
+
+    </style>
+</head>
+<body>
+ <div class="bu">
+     <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-light">Back</a>
+ </div>
+<div class="ed">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                 <h4>Edit recommented products</h4>
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                          <input type="text" name="pdtreconame" class="form-control" placeholder="First Name" value="{{a.pdtreconame}}" aria-label="name" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-images"></i></span>
+                             <img src="{% static img %}" height="100px" width="100px;">
+                            <input type="file" name="pdtrecoimage" class="form-control" placeholder="Upload Image" value="{{a.pdtrecoimage}}" aria-label="image" aria-describedby="basic-addon1">
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

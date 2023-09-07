@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Edit Review Page</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+    background-color: #FAACA8;
+    background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
+    }
+
+     .rev{
+        height:500px;
+        width:590px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:55px;
+        opacity:0.9;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+         .btn{
+        width:300px;
+        margin-left:98px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        margin-left:30px;
+        }
+        h4{
+        text-align:center;
+        color:green;
+        }
+        form{
+        width:550px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="rev">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                 <h4>Edit Newsfeed</h4>
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-file"></i></span>
+                             <img src="{% static img %}" height="100px" width="100px;">
+                            <input type="file" name="cusimage" class="form-control" placeholder="Image" value="{{a.cusimage}}" aria-label="customerimage" aria-describedby="basic-addon1">
+
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="cuname" class="form-control" placeholder="Firstname" value="{{a.cuname}}" aria-label="Firstname" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" name="comments" class="form-control" placeholder="comments" value="{{a.comments}}" aria-label="Comments" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" name="deleplace" class="form-control" placeholder="State/City" value="{{a.deleplace}}" aria-label="State/City" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                            <input type="date" name="deldate" class="form-control" placeholder="pdtdateone" value="{{a.deldate}}" aria-label="Date" aria-describedby="basic-addon1">
+                        </div>
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" name="occation" class="form-control" placeholder="Occation" value="{{a.occation}}" aria-label="Occation" aria-describedby="basic-addon1">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Update</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

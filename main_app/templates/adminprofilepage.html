@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Admin profile</title>
+    <style>
+    body{
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 21%, #FF99AC 39%, #cad227 60%, #278f98 80%, #2a7deb 100%);
+        }
+         .pro{
+        height:850px;
+        width:990px;
+        margin-top:10px;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        margin-left:300px;
+        border:1px solid white;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .btn{
+        margin-top:20px;
+        margin-left:50px;
+        height:40px;
+        width:200px;
+        }
+        .first{
+        height:100px;
+        width:300px;
+        background-color: #FA8BFF;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #47ca34 60%, #1850e6 80%, #bb3030 100%);
+        margin-top:50px;
+        border:1px solid white;
+        }
+         .second{
+        height:100px;
+        width:300px;
+        background-color: #08AEEA;
+        background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 24%, #c33019 49%, #1db12b 75%, #31166f 100%);
+        margin-left:330px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+         .third{
+        height:100px;
+        width:300px;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        margin-top:50px;
+        margin-left:660px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        .fa-solid{
+        color:#ff8080;
+        padding:15px;
+        }
+        a{
+        text-decoration:none;
+        color:white;
+        font-size:19px;
+        }
+
+        .fourthone{
+        height:100px;
+        width:300px;
+        background-color: #FA8BFF;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #47ca34 60%, #1850e6 80%, #bb3030 100%);
+        margin-top:50px;
+        border:1px solid white;
+        }
+        .fa-regular{
+        color:#6600cc;
+        padding:15px;
+        }
+
+        .fourthtwo{
+        height:100px;
+        width:300px;
+        background-color: #08AEEA;
+        background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 24%, #c33019 49%, #1db12b 75%, #31166f 100%);
+        margin-left:330px;
+        margin-top:-100px;
+        border:1px solid white;
+
+        }
+        .fifthone{
+        height:100px;
+        width:300px;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        margin-top:50px;
+        margin-left:660px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        .fifthtwo{
+         height:100px;
+        width:300px;
+        background-color: #FA8BFF;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #47ca34 60%, #1850e6 80%, #bb3030 100%);
+        margin-top:50px;
+        border:1px solid white;
+        }
+        .fifththree{
+        height:100px;
+        width:300px;
+        background-color: #08AEEA;
+        background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 24%, #c33019 49%, #1db12b 75%, #31166f 100%);
+        margin-left:330px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        .fifthfour{
+         height:100px;
+        width:300px;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        margin-top:50px;
+        margin-left:660px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        .sixthone{
+        height:100px;
+        width:300px;
+        background-color: #FA8BFF;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #47ca34 60%, #1850e6 80%, #bb3030 100%);
+        margin-top:50px;
+        border:1px solid white;
+
+        }
+        .sixthsecond{
+        height:100px;
+        width:300px;
+        background-color: #08AEEA;
+        background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 24%, #c33019 49%, #1db12b 75%, #31166f 100%);
+        margin-left:330px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        .sixththird{
+        height:100px;
+        width:300px;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        margin-top:50px;
+        margin-left:660px;
+        margin-top:-100px;
+        border:1px solid white;
+        }
+        h1{
+        text-align:center;
+        color:white;
+        }
+        .li .btn{
+        width:200px;
+        margin-top:10px;
+        }
+        .sevenone{
+        height:100px;
+        width:300px;
+        background-color: #FA8BFF;
+        background-image: linear-gradient(90deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #47ca34 60%, #1850e6 80%, #bb3030 100%);
+        margin-top:50px;
+        border:1px solid white;
+
+        }
+        h1{
+        font-family:cursive;
+        }
+    </style>
+</head>
+<body>
+<div class="li">
+    <a href="http://127.0.0.1:8000/main_app/adminlogin/" class="btn btn-light"><b>Back To Login</b></a>
+</div>
+
+<h1>ADMIN DASHBOARD</h1>
+<div class="pro">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="first">
+        <b><a href="http://127.0.0.1:8000/main_app/customerfulldisplay/"><i class="fa-solid fa-user fa-3x"></i>Customer Details</a></b>
+    </div>
+    <div class="second">
+        <b><a href="http://127.0.0.1:8000/main_app/productregistration/"><i class="fa-solid fa-gift fa-3x"></i>Upload Products</a></b>
+    </div>
+
+    <div class="third">
+        <b><a href="http://127.0.0.1:8000/main_app/adminproductdisplay"><i class="fa-solid fa-gift fa-beat fa-3x"></i>Display Products</a></b>
+
+    </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                 <div class="fourthone">
+                <b><a href="http://127.0.0.1:8000/main_app/videoupload/"><i class="fa-regular fa-file-video fa-3x"></i>Upload Videos</a></b>
+
+                </div>
+
+
+                <div class="fourthtwo">
+                <b><a href="http://127.0.0.1:8000/main_app/adminvideodisplay/"><i class="fa-regular fa-file-video fa-3x"></i>Display Videos</a></b>
+
+                </div>
+
+
+                <div class="fifthone">
+                <b><a href="http://127.0.0.1:8000/main_app/productgallerynew/"><i class="fa-solid fa-gift fa-3x"></i>Upload productgallery</a></b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+
+                 <div class="fifthtwo">
+                <b><a href="http://127.0.0.1:8000/main_app/galleryadmindisplay/"><i class="fa-solid fa-gift fa-beat fa-3x"></i>Display Gallery</a></b>
+
+                </div>
+
+
+                <div class="fifththree">
+                <b><a href="http://127.0.0.1:8000/main_app/newsfeedview/"><i class="fa-solid fa-newspaper fa-3x"></i>Upload News</a></b>
+
+                </div>
+
+                <div class="fifthfour">
+                <b><a href="http://127.0.0.1:8000/main_app/newsadmindisplay/"><i class="fa-solid fa-newspaper fa-3x"></i>Display News</a></b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                <div class="sixthone">
+        <b><a href="http://127.0.0.1:8000/main_app/recommentedview/"><i class="fa-solid fa-gift fa-3x"></i>Upload RecoProducts</a></b>
+    </div>
+    <div class="sixthsecond">
+        <b><a href="http://127.0.0.1:8000/main_app/recoadmindisplay/"><i class="fa-solid fa-gift fa-beat fa-3x"></i>Display RecoProducts</a></b>
+    </div>
+
+    <div class="sixththird">
+        <b><a href="http://127.0.0.1:8000/main_app/fullpaydisplay/"><i class="fa-solid fa-gift fa-beat fa-3x"></i>Full Paydisplay</a></b>
+
+    </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+
+                 <div class="sevenone">
+                <b><a href="http://127.0.0.1:8000/main_app/indexone/"><i class="fa-regular fa-comment fa-3x"></i>Display Review</a></b>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+</body>
+</html>

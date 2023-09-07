@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Product gallery edit</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+     background-color:#d1e0e0;
+    }
+     .ed{
+        height:790px;
+        width:550px;
+        margin-left:480px;
+        background-color:white;
+        margin-top:5px;
+        opacity:0.9;
+        }
+         .btn{
+        width:300px;
+        margin-left:98px;
+        }
+        .input-group{
+        width:500px;
+        border:1px solid dimgrey;
+        border-radius:8px;
+        }
+        h4{
+        margin-left:150px;
+        color:red;
+        }
+        form{
+        height:790px;
+        width:550px;
+
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-light" style="margin-top:10px;">Back</a>
+</div>
+<div class="ed">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                 <h4>Edit Your Productgallery</h4>
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                          <input type="text" name="pdtfname" class="form-control" placeholder="pdtonename" value="{{a.pdtfname}}" aria-label="pdtonename" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-images"></i></span>
+                             <img src="{% static im %}" height="100px" width="100px;">
+                            <input type="file" name="pdtfimage" class="form-control" placeholder="" value="{{a.pdtfimage}}" aria-label="pdtoneimage" aria-describedby="basic-addon1">
+
+
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list-ol"></i></span>
+                            <input type="number" name="pdtfquan" class="form-control" placeholder="pdtonequan" value="{{a.pdtfquan}}" aria-label="pdtonequan" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                            <input type="text" name="pdtffea" class="form-control" placeholder="pdtfeaone" value="{{a.pdtffea}}" aria-label="pdtfeaone" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" name="pdtfdate" class="form-control" placeholder="pdtdateone" value="{{a.pdtfdate}}" aria-label="pdtdateone" aria-describedby="basic-addon1">
+                        </div>
+
+
+
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                          <input type="text" name="pdtfnewname" class="form-control" placeholder="pdtnewname" value="{{a.pdtfnewname}}" aria-label="pdtnewname" aria-describedby="basic-addon1">
+                        </div>
+
+
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-images"></i></span>
+                             <img src="{% static img %}" height="100px" width="100px;">
+                            <input type="file" name="pdtfnewimage" class="form-control" placeholder="pdtfnewimage" value="{{a.pdtfnewimage}}" aria-label="pdtnewimage" aria-describedby="basic-addon1">
+
+
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list-ol"></i></span>
+                            <input type="number" name="pdtfnewquan" class="form-control" placeholder="pdtnewquan" value="{{a.pdtfnewquan}}" aria-label="pdtnewquan" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-gift"></i></span>
+                            <input type="text" name="pdtffeanew" class="form-control" placeholder="pdtfeanew" value="{{a.pdtffeanew}}" aria-label="pdtfeanew" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-calendar-days"></i></span>
+                            <input type="date" name="pdtfdatenew" class="form-control" placeholder="pdtdatenew" value="{{a.pdtfdatenew}}" aria-label="pdtdatenew" aria-describedby="basic-addon1">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

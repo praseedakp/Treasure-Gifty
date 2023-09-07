@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tb1");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Full customer display</title>
+    <style>
+         *{
+    padding:0px;
+    margin:0px;
+    box:border-box;
+    }
+    body{
+     background-color: #08AEEA;
+     background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 24%, #c33019 49%, #1db12b 75%, #31166f 100%);
+     }
+    h1{
+    text-align:center;
+    color:pink;
+    font-size:40px;
+    font-family:cursive;
+    }
+    .full{
+        height:700px;
+        width:800px;
+        margin-left:150px;
+        margin-top:10px;
+        }
+
+    #tb1{
+        border-collapse:collapse;
+        width:80%;
+        color:white;
+        font-size:23px;
+        }
+    tb1,td,th{
+        border-bottom:2px solid red;
+        border-top:2px solid red;
+        border:4px solid white;
+        text-align:center;
+        }
+    th{
+        height:30px;
+        background-color: #21D4FD;
+        background-image: linear-gradient(90deg, #21D4FD 0%, #B721FF 50%, #d42020 100%);
+
+        }
+    td{
+        height:30px;
+        text-align:center;
+        background-color: #3EECAC;
+        background-image: linear-gradient(90deg, #3EECAC 0%, #EE74E1 24%, #a22626 49%, #3c116f 75%, #1fd835 100%);
+        }
+    .btn{
+    margin-left:50px;
+    width:200px;
+    border:4px solid dimgrey;
+    font-size:20px;
+    }
+    input{
+    width:600px;
+    height:40px;
+    margin-bottom:5px;
+    border:3px solid dimgrey;
+    }
+    </style>
+
+</head>
+<body>
+<h1>Customer Data</h1>
+<div>
+    <a href="http://127.0.0.1:8000/main_app/adminprofile/" class="btn btn-light">Back</a>
+</div>
+<div class="full">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for customers....">
+
+                <table id="tb1">
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Firstname</th>
+                    <th>Laststname</th>
+                    <th>State</th>
+                    <th>Profile Pic</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+
+                    {% for k,l,m,n,o,p,q,r,s in b %}
+                <tr>
+                    <td>{{k}}</td>
+                    <td>{{l}}</td>
+                    <td>{{m}}</td>
+                    <td>{{n}}</td>
+                    <td><img src="{% static o %}" height="100px" width="100px"></td>
+                    <td>{{p}}</td>
+                    <td>{{q}}</td>
+                     <td>{{r}}</td>
+                     <td>{{s}}</td>
+
+                </tr>
+            {% endfor %}
+
+            </table>
+
+            </div>
+    </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

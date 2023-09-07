@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+  <style>
+  *{
+  padding:0px;
+  margin:0px;
+  box:border-box;
+  }
+  body{
+  background-color:#d1e0e0;
+  }
+    .navbar{
+    background-color:#ffaa80;
+    }
+     .nav-link{
+    font-size:20px;
+    font-family:cursive;
+
+    }
+    .carousel-item img{
+    height:550px;
+    }
+    .carousel-caption{
+    color:#FFFF;
+    font-size:50px;
+    font-weight:100px;
+
+    }
+
+
+    .firrow{
+    margin-top:19px;
+    height:240px;
+    width:1480px;
+    border: 1px solid white;
+    box-shadow: 5px 10px #800040;
+    background-color:white;
+    }
+    .firrow p{
+            text-align:justify;
+            font-size:16px;
+            color:blue;
+        }
+        .secrow{
+         margin-top:19px;
+        height:390px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px #80bfff;
+        }
+        .onehelp{
+        height:120px;
+        width:400px;
+        background:#999966;
+        text-align:center;
+        }
+         .onehelp p{
+         color:#ffff;
+         font-size:15px;
+         }
+        .twohelp{
+        height:120px;
+        width:400px;
+        background:#999966;
+        margin-left:410px;
+        text-align:center;
+
+        }
+        .twohelp p{
+         color:#ffff;
+         font-size:15px;
+         }
+        .threehelp{
+        height:120px;
+        width:400px;
+        background:#999966;
+        margin-left:820px;
+        text-align:center;
+        margin-top:-250px;
+        }
+        .threehelp p{
+         color:#ffff;
+         font-size:15px;
+         }
+         .fifthrow{
+         margin-top:19px;
+        height:140px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px #9900ff;
+        }
+
+        h3{
+        color:#660066;
+        }
+
+        .footer{
+            padding:20px 15px 10px;
+            color:#800000;
+            background:#ff8080;
+            margin-top:50px;
+            font-size:15px;
+        }
+        .footer h2{
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color:white;
+
+        }
+        .footer .col{
+            flex-basis:10%;
+            flex-grow: 1;
+            margin-bottom: 20px;
+
+        }
+        .footer .col a{
+            display:block;
+            text-decoration: none;
+            color:white;
+            font-size:14px;
+            margin-bottom:10px;
+
+        }
+        .footer .row{
+            align-items: flex-start;
+            padding:10px 0;
+
+
+        }
+        .footer .language-btn{
+            color:red;
+            padding:10px 20px;
+            border-radius:3px;
+        }
+        .copyright-txt{
+            font-size:14px;
+            margin-top:20px;
+            margin-bottom:10px;
+          }
+
+        .gototop
+        {
+        position:fixed;
+        width:50px;
+        height:50px;
+        background:lightgrey;
+        border:2px solid dimgrey;
+        border-radius:20px;
+        bottom:40px;
+        right:50px;
+        text-decoration:none;
+        text-align:center;
+        line-height:50px;
+        color:dimgrey;
+        font-size:22px;
+        }
+        html{
+        sroll-behaviour:smooth;
+        }
+
+  </style>
+</head>
+<body>
+<!--navbar frontpage-->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <b><a class="navbar-brand" href="http://127.0.0.1:8000/main_app/indexpage/" style="color:#990000;">Treasure Gifty(TG) <i class="fa-solid fa-gift"></i></a></b>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/indexone/" style="color:white;">Home</a></b>
+        </li>
+
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerreg/" style="color:white;">Register</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerlogin/" style="color:white;">Login</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/aboutuspage/" style="color:white;">About Us</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/contactpage/" style="color:white;">Contact Us</a></b>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/emptycartitems/"><i class="fa-solid fa-cart-shopping fa-fade" style="color:white;margin-left:290px;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/emptywishlistitems/"><i class="fa-regular fa-heart fa-fade" style="color:red;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/adminlogin/" style="color:white;">Admin Login</a>
+        </li>
+           <li class="nav-item">
+          <b><h4 style="color:#fff;"><i class="fa-solid fa-phone"></i>  +012 345 67890</h4></b>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!--carousel:-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'contactusone.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Get upto 70% off on gifts</h2>
+        <p>Don't let this offer slip away</p>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="firrow">
+        <div class="container">
+            <h3>Treasure Gifty</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Indian history and traditions are what makes us stand apart from the rest of the world. We all are tied to our interpersonal relationships through a special undefinable bond that we like to celebrate from time to time. We have a festival to celebrate every occasion and relation as well, that’s our glory. For instance, there’s Valentine's Day for lovers and Rakshabandhan to celebrate the bond of siblings. Likewise, we have boss’s day, father’s day, mother’s day, and many such that honor all relations respectively. For every festival, there’s a different story. What remains the same is the sense of belongingness and togetherness they bring. Whether you agree or not, they are imperative to stick around, especially in this busy schedule.
+                        To make these occasions extra special, we exchange gifts. The tradition has lived long for eternity and we do not want it to discontinue. The provision and acceptance of gifts represent the tenderness and regard we have for each other. Furthermore, it rebuilds our old relations and is a great start to begin a new one. It does not have to be a tangible gift, your efforts and accomplishments can also be a present to your loved ones. Psychologically, gifts are also proven to reduce anxiety, build confidence, and evoke gratitude. So what are you waiting for, do that all for your people, Treasure Gifty’s here!</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--second row-->
+
+<div class="secrow">
+        <div class="container">
+            <h3>How can we help?</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="onehelp">
+                        <b><p>Happy To Help</p></b>
+                        <b><p>8AM to 11PM</p></b>
+                        <a href="http://127.0.0.1:8000/main_app/customerlogin/" class="btn btn-light">LOGIN</a>
+                    </div>
+
+                     <div class="twohelp">
+                        <b><p>Talk To Us</p></b>
+                        <b><p>8AM to 11PM</p></b>
+                         <a href="http://127.0.0.1:8000/main_app/customerlogin/" class="btn btn-light">LOGIN</a>
+                    </div>
+
+                     <div class="threehelp">
+                        <b><p>Chat On WhatsApp</p></b>
+                        <b><p>8AM to 11PM</p></b>
+                         <a href="http://127.0.0.1:8000/main_app/customerlogin/" class="btn btn-light">LOGIN</a>
+                    </div>
+
+
+                </div>
+
+
+                </div>
+
+        </div>
+</div>
+
+<!--fifth row-->
+<div class="fifthrow">
+        <div class="container">
+            <h3>Connect with us</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                <i class="fa-brands fa-facebook fa-3x" style="color:blue;padding:10px;"></i>
+                <i class="fa-brands fa-instagram fa-3x" style="color:#ff1a75;padding:10px;"></i>
+                <i class="fa-brands fa-twitter fa-3x" style="color:blue;padding:10px;"></i>
+                <i class="fa-solid fa-envelope fa-3x" style="color:#ff1a75;padding:10px;"></i>
+                <i class="fa-brands fa-whatsapp fa-3x" style="color:green;padding:10px;"></i>
+                <i class="fa-brands fa-pinterest fa-3x" style="color:red;padding:10px;"></i>
+                </div>
+
+
+
+            </div>
+
+        </div>
+</div>
+
+        <div class="footer">
+            <div class="container">
+                <h2>Questions? call 000-000-000-000</h2>
+                <b><h2><i class="fa fa-map-marker-alt mr-2"></i>123 Street, India, Kerala</h2></b>
+                <b><h2><i class="fa fa-envelope mr-2"></i>Treasuregifty@example.com</h2></b>
+
+        <div class="row">
+            <div class="col">
+                <p>Help Center</p>
+                <i class="fa-brands fa-facebook fa-2x" style="color:blue;"></i>
+                <i class="fa-brands fa-instagram fa-2x" style="color:#ff1a75;"></i>
+                <i class="fa-brands fa-twitter fa-2x" style="color:blue;"></i>
+                <i class="fa-solid fa-envelope fa-2x" style="color:#ff1a75;;"></i>
+                <i class="fa-brands fa-whatsapp fa-2x" style="color:green;"></i>
+                <i class="fa-brands fa-pinterest fa-2x" style="color:red;"></i>
+
+
+            </div>
+
+            <div class="col">
+                 <b><p style="color:white;font-size:20px;">Quick Links</p></b>
+                <a href="http://127.0.0.1:8000/main_app/contactpage/">Contact Us</a>
+                <a href="http://127.0.0.1:8000/main_app/aboutuspage/">About Us</a>
+                <a href="http://127.0.0.1:8000/main_app/indexpage/">Gifts for Celebrations</a>
+                <a href="http://127.0.0.1:8000/main_app/indexone/">Gift for all</a>
+
+
+
+            </div>
+
+
+            <div class="col">
+               <b><p style="color:white;font-size:20px;">Payment Method</p></b>
+                <p>Google Pay</p>
+                <p>Credit Card</p>
+                <p>Debit Card</p>
+                <p>Paytym</p>
+                <i class="fa-brands fa-google-pay fa-2x" style="padding:5px;color:green;"></i>
+                <i class="fa-solid fa-credit-card fa-2x" style="padding:5px;color:#ffff;"></i>
+                <i class="fa-solid fa-credit-card fa-2x" style="padding:5px;color:lightgrey;"></i>
+                <i class="fa-brands fa-amazon-pay fa-2x" style="padding:5px;color:#ffff;"></i>
+
+            </div>
+
+             <div class="col">
+
+                <b><p style="color:white;font-size:20px;">Account</p></b>
+                 <a href="http://127.0.0.1:8000/main_app/indexone/">Home</a>
+                <a href="http://127.0.0.1:8000/main_app/customerreg/">Registration</a>
+                <a href="http://127.0.0.1:8000/main_app/customerlogin/">Login</a>
+
+
+            </div>
+
+            <div class="col">
+                <b><p  style="color:white;font-size:20px;">Suggested For You</p></b>
+                <a href="http://127.0.0.1:8000/main_app/termscondition/">Terms of Use</a>
+                <a href="http://127.0.0.1:8000/main_app/emptycartitems/">Cart</a>
+                <a href="http://127.0.0.1:8000/main_app/emptywishlistitems/">Wishlist</a>
+
+
+
+            </div>
+
+        </div>
+        <button class="language-btn"><b>TG</b></button>
+        <b><p class="copyright-txt">Treasure Gifty(TG)</p></b>
+    </div>
+        </div>
+
+        <div class="go">
+             <a class="gototop" href=""><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+</body>
+</html>

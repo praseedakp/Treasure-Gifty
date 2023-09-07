@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Customer cart display</title>
+    <style>
+    body{
+    background:#e6fff9;
+    }
+        .cart-page{
+    margin:50px auto;
+
+    }
+    .navbar{
+     background:#ff523b;
+    }
+     .nav-link{
+    font-size:20px;
+    font-family:cursive;
+
+    }
+    table{
+    width:90%;
+    border-collapse:collapse;
+    margin-left:20px;
+    }
+    th{
+    text-align:left;
+    padding:5px;
+    color:#fff;
+   background-color: #08AEEA;
+background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+    font-weight:normal;
+    }
+    td{
+    padding:10px 5px;
+    }
+    td input{
+    width:40px;
+    height:30px;
+    padding:5px;
+    }
+    td a{
+    color:#ff523b;
+    font-size:12px;
+    }
+    td img{
+    width:80px;
+    height:80px;
+    margin-right:10px;
+    }
+    .fa-solid{
+    color:red;
+    }
+    h1{
+    text-align:center;
+    color:red;
+    }
+    .back .btn{
+    width:300px;
+    margin-top:10px;
+    margin-left:990px;
+    font-size:20px;
+    }
+    .total-price{
+    display:flex;
+    margin-left:930px;
+<!--    justify-content:flex-end;-->
+
+    }
+    .total-price table{
+    border-top:3px solid #ff523b;
+    width:50%;
+    max-width:350px;
+    }
+    td:last-child{
+    text-align:right;
+    }
+    th:last-child{
+    text-align:right;
+    }
+    td .btn{
+    height:40px;
+    width:200px;
+    border:3px solid palegreen;
+    font-size:20px;
+    margin-left:60px;
+
+    }
+    p{
+    color:#00cc66;
+    font-size:20px;
+    text-align:center;
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <b><a class="navbar-brand" href="http://127.0.0.1:8000/main_app/cartdisplay/" style="color:white;">Treasure Gifty(TG)</a></b>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color:white;">Home</a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerreg/" style="color:white;">Register</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerlogin/" style="color:white;">Login</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/aboutuspage/" style="color:white;">About Us</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/contactpage/" style="color:white;">Contact Us</a>
+        </li>
+
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerreview/" style="color:white;"><i class="fa-regular fa-comment"></i>My Reviews</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/videocustomerdisp/"><i class="fa-regular fa-file-video" style="color:#ffb3ec;"></i></a>
+            </li>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/gallerycustomerdisp/"><i class="fa-solid fa-gift" style="color:yellow;"></i></a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/newsfeeddisplay/"> <i class="fa-solid fa-bell fa-beat" style="color: #fff0b3;"></i></a>
+        </li>
+
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/cartdisplay/"><i class="fa-solid fa-cart-shopping fa-fade" style="color:white;margin-left:300px;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/wishdisplay/"><i class="fa-regular fa-heart fa-fade" style="color:#6600cc;"></i></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerprodisplay/"><i class="fa-regular fa-circle-user" style="color:white;"></i></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<h1>Your Cart Items</h1>
+<p>We have taken a step further and combined the gifts.These are sure to make the day a little more special of the recipient for sure</p>
+
+<!--cart page-->
+<div class="simple-container cart-page">
+    <table>
+        <tr>
+            <th><b>Product Name</b></th>
+            <th><b>Quantity</b></th>
+            <th><b>Product</b></th>
+            <th><b>ProductId</b></th>
+            <th><b>Price</b></th>
+            <th><b>Total</b></th>
+        </tr>
+        {% for i,j,k,l,m in pt %}
+        {% if i == id %}
+        <tr>
+            <td><b>{{j}}</b></td>
+            <td><input type="number" value="1"></td>
+              <td><img src="{% static l %}"></td>
+           <td><b>{{k}}</b></td>
+            <td><b>{{m}}.00</b></td>
+           <td><b>{{m}}.00</b></td>
+            <td><a href="http://127.0.0.1:8000/main_app/carddelete/{{id}}"><i class="fa-solid fa-trash fa-2x"></i></a></td>
+
+        </tr>
+
+    {% endif %}
+    {% endfor %}
+    </table>
+
+<!--    for subtotal-->
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Total</td>
+                <td>{{total}}.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>23.00</td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td>{{sub}}</td>
+            </tr>
+            <tr>
+                <td><a href="http://127.0.0.1:8000/main_app/paymentviewpage/" class="btn btn-primary"><b>BUY IT NOW</b></a></td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

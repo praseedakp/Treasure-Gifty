@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+  <style>
+  *{
+  padding:0px;
+  margin:0px;
+  box:border-box;
+  }
+  body{
+  background-color:#d1e0e0;
+  }
+
+    .navbar{
+    background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 18%, #1c2d88 49%, #209050 75%, #311e9a 100%);
+    }
+     .nav-link{
+    font-size:20px;
+    font-family:cursive;
+
+    }
+    .carousel-item img{
+    height:550px;
+    }
+    .carousel-caption{
+    color:#000099;
+    font-size:50px;
+    font-weight:100px;
+
+    }
+    .new{
+     margin-top:19px;
+     margin-left:45px;
+    height:150px;
+    width:1400px;
+    border: 2px solid orange;
+    border-radius:10px;
+    box-shadow: 5px 10px #4567;
+    background-color:#ccffcc;
+    }
+    .new p{
+    text-align:center;
+    font-size:30px;
+    color:#cc0044;
+    margin-top:-10px;
+    }
+    .new .btn{
+    margin-left:580px;
+    }
+    .card{
+    border:2px solid lightgrey;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+    .firrow{
+    margin-top:19px;
+    height:240px;
+    width:1480px;
+    border: 1px solid white;
+    box-shadow: 5px 10px #ffc266;
+    background-color:white;
+    }
+    .firrow img{
+            height:100px;
+            width:150px;
+            border-radius: 100%;
+            border:3px solid crimson;
+            border-radius:20% 20%;
+
+        }
+        .firrow img:hover{
+        transform:scale(1.2);
+        }
+        .secrow{
+         margin-top:19px;
+        height:390px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px #80bfff;
+        }
+        .secrow .card img{
+            height:150px;
+            width:200px;
+            border:2px solid white;
+            border-radius:50% 20% 50%;
+        }
+
+         .secrow img:hover{
+        transform:scale(1.01);
+        }
+
+        .throw{
+         margin-top:19px;
+        height:390px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px  #99ffcc;
+        }
+        .throw img{
+             height:150px;
+            width:200px;
+            border:2px solid white;
+            border-radius:70% 30% 70%;
+        }
+        .throw img:hover{
+        transform:scale(1.02);
+        }
+        .fourow{
+         margin-top:19px;
+        height:390px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px #66ffff;
+        }
+        .fourow img{
+            height:150px;
+            width:200px;
+            border:2px solid white;
+            border-radius:70% 50% 70%;
+        }
+        .fourow img:hover{
+        transform:scale(1.02);
+        }
+         .fifthrow{
+         margin-top:19px;
+        height:440px;
+        width:1480px;
+        background-color:white;
+        border: 1px solid white;
+        box-shadow: 5px 10px #80bfff;
+        }
+        .fifthrow img{
+             height:130px;
+            width:250px;
+            border:2px solid white;
+             border-radius:70% 50% 70%;
+        }
+         .fifthrow img{
+        transition: all 1.5s ease;
+      }
+
+       .center{
+        overflow:hidden;
+      }
+        .fifthrow .card-body p{
+        margin-top:-10px;
+        }
+         .fifthrow img:hover{
+        transform:scale(1.5);
+        }
+        .card-body{
+        text-align:center;
+        font-size:16px;
+        font-family:cursive;
+        color:#660066;
+        background:#d9ffb3;
+
+        }
+        h3{
+        color:dimgrey;
+        }
+        h6{
+        color:dimgrey;
+        }
+        h5{
+        color:#800000;
+        }
+        .footer{
+            padding:20px 15px 10px;
+            color:#800000;
+            background:#4d4d00;
+            margin-top:50px;
+            font-size:15px;
+        }
+        .footer h2{
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color:white;
+
+        }
+        .footer .col{
+            flex-basis:10%;
+            flex-grow: 1;
+            margin-bottom: 20px;
+
+        }
+        .footer .col a{
+            display:block;
+            text-decoration: none;
+            color:white;
+            font-size:14px;
+            margin-bottom:10px;
+
+        }
+        .footer .row{
+            align-items: flex-start;
+            padding:10px 0;
+
+
+        }
+        .footer .language-btn{
+            color:red;
+            padding:10px 20px;
+            border-radius:3px;
+        }
+        .copyright-txt{
+            font-size:14px;
+            margin-top:20px;
+            margin-bottom:10px;
+
+          }
+
+        .gototop
+        {
+        position:fixed;
+        width:50px;
+        height:50px;
+        background:lightgrey;
+        border:2px solid dimgrey;
+        border-radius:20px;
+        bottom:40px;
+        right:50px;
+        text-decoration:none;
+        text-align:center;
+        line-height:50px;
+        color:dimgrey;
+        font-size:22px;
+        }
+
+        html{
+        sroll-behaviour:smooth;
+        }
+
+  </style>
+</head>
+<body>
+<!--navbar frontpage-->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <b><a class="navbar-brand" href="http://127.0.0.1:8000/main_app/indexpage/" style="color:blue;">Treasure Gifty(TG) <i class="fa-solid fa-gift"></i></a></b>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/indexone/" style="color:white;">Home</a></b>
+        </li>
+
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerreg/" style="color:white;">Register</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/customerlogin/" style="color:white;">Login</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/aboutuspage/" style="color:white;">About Us</a></b>
+        </li>
+         <li class="nav-item">
+          <b><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/contactpage/" style="color:white;">Contact Us</a></b>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/emptycartitems/"><i class="fa-solid fa-cart-shopping fa-fade" style="color:white;margin-left:490px;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/emptywishlistitems/"><i class="fa-regular fa-heart fa-fade" style="color:red;"></i></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/main_app/adminlogin/" style="color:white;">Admin Login</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!--carousel:-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'giftnewhomeone.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+        <h2>Get upto 70% off on gifts</h2>
+        <p>Don't let this offer slip away</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'giftnewhometwo.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Get upto 70% off on gifts</h5>
+        <p>Don't let this offer slip away</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'giftnewhomethree.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+        <h5>Get upto 70% off on gifts</h5>
+        <p>Don't let this offer slip away</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{% static 'giftnewfourhome.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Get upto 70% off on gifts</h5>
+        <p>Don't let this offer slip away</p>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="new">
+    <div class="container">
+        <b><p>FIND THE PERFECT GIFTS</p></b>
+        <b><P>Discover Gifts By Recipients,Relationships & Occations</P></b>
+        <a href="http://127.0.0.1:8000/main_app/customerlogin/" class="btn btn-success"><b>Start Search</b></a>
+
+    </div>
+</div>
+
+<div class="firrow">
+        <div class="container">
+            <h3>Trending Gifts</h3>
+            <h5>Handpicked for your gifting needs</h5>
+            <div class="row">
+                <div class="col-2">
+                    <h3>Flowers</h3>
+                    <img src="{% static 'firstflower.jpg' %}">
+
+                </div>
+
+                <div class="col-2">
+                    <h3>Cakes</h3>
+                    <img src="{% static 'kitcketcake.jpg' %}">
+
+                </div>
+
+                <div class="col-2">
+                    <h3>Personalized</h3>
+                    <img src="{% static 'personalise41.jpg' %}">
+
+                </div>
+
+                <div class="col-2">
+                    <h3>Unique Items</h3>
+                    <img src="{% static 'pillowdaday12.jpg' %}">
+
+                </div>
+
+                <div class="col-2">
+                    <h3>Teddies</h3>
+                    <img src="{% static 'teddy43.jpg' %}">
+
+                </div>
+
+                <div class="col-2">
+                    <h3>Photo Frames</h3>
+                    <img src="{% static 'frame81.jpg' %}">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--second row-->
+
+<div class="secrow">
+        <div class="container">
+            <h3>Celebrate Milestones</h3>
+            <h5>With our memorable gifts</h5>
+            <div class="row">
+                <div class="col-2">
+                <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'bfbg2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Birthday</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'weddingday.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Wedding</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'romantic1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Anniversary</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-2">
+                <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'greeting132.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Best Wishes</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'newborn.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">NewBorn</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'housewarming134.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">House Warming</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!--thirdrow-->
+
+<div class="throw">
+        <div class="container">
+            <h3>Best Selling Gifts</h3>
+            <h5>Packed with love</h5>
+            <div class="row">
+                <div class="col-2">
+                   <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'happb8mug.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Birthday Magic Mugs</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'ceramic pots12.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Ceramic Pots</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'weddingcakes134.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Special Cakes</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'giftbasket156.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Basket Hamper</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'pillowbir578.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Cusions</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'sweetsbackground116.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Sweets&Chocos</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<div class="fourow">
+        <div class="container">
+            <h3>Categories</h3>
+            <h5>Wide range of gifts for your celebration</h5>
+            <div class="row">
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'luckyplant156.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Lucky Bamboo</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'plants5l.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Peace Lilly</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'plant3f.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">White Pothos</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'indoorq.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Indoor Plants</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                   <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'plants2ff.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Jade Plants</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="col-2">
+                    <div class="card" style="width:200px;height:290px;">
+                    <img src="{% static 'plants4s.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Money Plants</p>
+                    <p><i class="fa-brands fa-gratipay fa-2x" style="color:#ff3385;"></i></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--fifth row-->
+<div class="fifthrow">
+        <div class="container">
+            <h3>Celebrate Occasions with India's #1 Online Gift Store</h3>
+            <h6>Our Customers Review</h6>
+            <div class="row">
+                     {% for i,j,k,l,m,n,o in ru %}
+                <div class="col-2">
+                    <div class="card" style="height:350px;width:200px;">
+                         <div class="center">
+                    <img src="{% static j %}" class="card-img-top" style="width:200px;">
+                         </div>
+                    <div class="card-body">
+                    <p>{{k}}</p>
+                         <p>{{i}}</p>
+                        <p>{{l}}</p>
+                         <p>{{m}}</p>
+                         <p>{{n}}</p>
+                         <p>{{o}}</p>
+                        <a href="http://127.0.0.1:8000/main_app/reviewdelete/{{i}}"><i class="fa-solid fa-trash" style="color:crimson;margin-right:20px;"></i></a>
+                         <a href="http://127.0.0.1:8000/main_app/reviewedit/{{i}}"><i class="fa-regular fa-pen-to-square" style="color:#3456;"></i></a>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+                </div>
+            </div>
+
+        <div class="footer">
+            <div class="container">
+                <h2>Questions? call 000-000-000-000</h2>
+                <b><h2><i class="fa fa-map-marker-alt mr-2"></i>123 Street, India, Kerala</h2></b>
+                <b><h2><i class="fa fa-envelope mr-2"></i>Treasuregifty@example.com</h2></b>
+
+        <div class="row">
+            <div class="col">
+                 <p>Help Center</p>
+                <i class="fa-brands fa-facebook fa-2x" style="color:blue;"></i>
+                <i class="fa-brands fa-instagram fa-2x" style="color:#ff1a75;"></i>
+                <i class="fa-brands fa-twitter fa-2x" style="color:blue;"></i>
+                <i class="fa-solid fa-envelope fa-2x" style="color:#ff1a75;;"></i>
+                <i class="fa-brands fa-whatsapp fa-2x" style="color:green;"></i>
+                <i class="fa-brands fa-pinterest fa-2x" style="color:red;"></i>
+
+            </div>
+
+            <div class="col">
+                  <b><p style="color:white;font-size:20px;">Quick Links</p></b>
+                <a href="http://127.0.0.1:8000/main_app/contactpage/">Contact Us</a>
+                <a href="http://127.0.0.1:8000/main_app/aboutuspage/">About Us</a>
+                <a href="http://127.0.0.1:8000/main_app/indexpage/">Gifts for Celebrations</a>
+                <a href="http://127.0.0.1:8000/main_app/indexone/">Gift for all</a>
+
+
+            </div>
+
+
+            <div class="col">
+               <b><p style="color:white;font-size:20px;">Payment Method</p></b>
+                <p>Google Pay</p>
+                <p>Credit Card</p>
+                <p>Debit Card</p>
+                <p>Paytym</p>
+
+                <i class="fa-brands fa-google-pay fa-2x" style="padding:5px;color:green;"></i>
+                <i class="fa-solid fa-credit-card fa-2x" style="padding:5px;color:#ffff;"></i>
+                <i class="fa-solid fa-credit-card fa-2x" style="padding:5px;color:lightgrey;"></i>
+                <i class="fa-brands fa-amazon-pay fa-2x" style="padding:5px;color:#ffff;"></i>
+
+            </div>
+
+             <div class="col">
+
+
+                <b><p style="color:white;font-size:20px;">Account</p></b>
+                 <a href="http://127.0.0.1:8000/main_app/indexone/">Home</a>
+                <a href="http://127.0.0.1:8000/main_app/customerreg/">Registration</a>
+                <a href="http://127.0.0.1:8000/main_app/customerlogin/">Login</a>
+
+
+
+            </div>
+
+            <div class="col">
+                <b><p  style="color:white;font-size:20px;">Suggested For You</p></b>
+                <a href="http://127.0.0.1:8000/main_app/termscondition/">Terms of Use</a>
+                <a href="http://127.0.0.1:8000/main_app/emptycartitems/">Cart</a>
+                <a href="http://127.0.0.1:8000/main_app/emptywishlistitems/">Wishlist</a>
+
+
+            </div>
+
+        </div>
+        <button class="language-btn"><b>TG</b></button>
+        <b><p class="copyright-txt">Treasure Gifty(TG)</p></b>
+    </div>
+        </div>
+
+        <div class="go">
+             <a class="gototop" href=""><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+</body>
+</html>
